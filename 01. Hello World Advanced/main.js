@@ -4,7 +4,7 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.statusCode = 200;
 
-  if (req.url === '/') {
+  if (req.url === '/' && req.method === 'GET') {
     res.end('Hello World');
     return;
   }
